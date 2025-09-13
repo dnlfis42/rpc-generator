@@ -1,0 +1,26 @@
+TYPE = 0
+SC_CREATE_MY_CHARACTER(unsigned int id, unsigned char facing, short x, short y, char hp);
+SC_CREATE_OTHER_CHARACTER(unsigned int id, unsigned char facing, short x, short y, char hp);
+SC_DELETE_CHARACTER(unsigned int id);
+
+TYPE = 10
+CS_MOVE_START(unsigned char direction, short x, short y);
+SC_MOVE_START(unsigned int id, unsigned char direction, short x, short y);
+CS_MOVE_STOP(unsigned char facing, short x, short y);
+SC_MOVE_STOP(unsigned int id, unsigned char facing, short x, short y);
+
+TYPE = 20
+CS_ATTACK_1(unsigned char facing, short x, short y);
+SC_ATTACK_1(unsigned int id, unsigned char facing, short x, short y);
+CS_ATTACK_2(unsigned char facing, short x, short y);
+SC_ATTACK_2(unsigned int id, unsigned char facing, short x, short y);
+CS_ATTACK_3(unsigned char facing, short x, short y);
+SC_ATTACK_3(unsigned int id, unsigned char facing, short x, short y);
+
+TYPE = 30
+SC_DAMAGE(unsigned int attacker_id, unsigned int victim_id, char victim_hp);
+
+TYPE = 251
+SC_SYNC(unsigned int id, short x, short y);
+CS_ECHO(DWORD time);
+SC_ECHO(DWORD time);
